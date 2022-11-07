@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Jul 28 12:02:35 2022
+# Process ID: 19808
+# Current directory: C:/Users/tangi/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27972
+# Log file: C:/Users/tangi/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/tangi/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/xvp/ring_oscillator/project_1.xpr
+open_project D:/xvp/ring_oscillator/project_1.xpr
+update_compile_order -fileset sources_1
+archive_project D:/xvp/project_1.xpr.zip -temp_dir C:/Users/tangi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-19808-LAPTOP-V2QN0M4Q -force -include_local_ip_cache

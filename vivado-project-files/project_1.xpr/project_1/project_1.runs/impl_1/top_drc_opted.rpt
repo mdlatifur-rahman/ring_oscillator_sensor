@@ -1,0 +1,483 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sat Nov  5 15:37:16 2022
+| Host         : LAPTOP-V2QN0M4Q running 64-bit major release  (build 9200)
+| Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+| Design       : top
+| Device       : xc7a100tftg256-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 33
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
+| LUTLP-2     | Warning  | Combinatorial Loop Allowed                                  | 16         |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 16         |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+LUTLP-2#1 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[0].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#2 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[10].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#3 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[11].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#4 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[12].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#5 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[13].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#6 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[14].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#7 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[15].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#8 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[1].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#9 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[2].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#10 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[3].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#11 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[4].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#12 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[5].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#13 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[6].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#14 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[7].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#15 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[8].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#16 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: final_sensor/ro_sensor_multiple_instances[9].sensor/ro/clk_out_INST_0
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro/wi_inferred_i_1.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[0].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[0].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[10].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[10].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[11].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[11].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[12].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[12].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[13].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[13].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[14].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[14].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#7 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[15].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[15].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#8 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[1].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[1].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#9 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[2].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[2].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#10 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[3].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[3].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#11 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[4].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[4].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#12 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[5].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[5].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#13 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[6].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[6].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#14 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[7].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[7].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#15 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[8].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[8].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#16 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT final_sensor/ro_sensor_multiple_instances[9].sensor/ro/clk_out_INST_0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[0],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[10],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[11],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[12],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[13],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[14],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[15],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[1],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[2],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[3],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[4],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[5],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[6],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[7],
+final_sensor/ro_sensor_multiple_instances[9].sensor/ro_counter/count_r_reg[8]
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+

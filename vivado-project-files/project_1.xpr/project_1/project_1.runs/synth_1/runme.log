@@ -1,0 +1,809 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1039.227 ; gain = 0.000
+Command: synth_design -top top -part xc7a100tftg256-1 -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tftg256-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28340
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1117.168 ; gain = 77.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'top_risc' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/top_risc.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/control_unit/control_unit.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (1#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/control_unit/control_unit.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'program_counter' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/program_counter/program_counter.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'program_counter' (2#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/program_counter/program_counter.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'instruction_memory' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/instruction_memory/instruction_memory.sv:3]
+INFO: [Synth 8-3876] $readmem data file 'instruction_memory.mem' is read successfully [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/instruction_memory/instruction_memory.sv:16]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (3#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/instruction_memory/instruction_memory.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/register_file/register_file.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (4#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/register_file/register_file.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'imm_generator' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/imm_generator/imm_generator.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'imm_generator' (5#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/imm_generator/imm_generator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU_control' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/ALU/ALU_control.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_control' (6#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/ALU/ALU_control.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/ALU/ALU.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (7#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/ALU/ALU.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'data_memory' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/data_memory/data_memory.sv:3]
+INFO: [Synth 8-3876] $readmem data file 'data_memory.mem' is read successfully [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/data_memory/data_memory.sv:37]
+INFO: [Synth 8-6155] done synthesizing module 'data_memory' (8#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/data_memory/data_memory.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_risc' (9#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/top_risc.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'sensor_adder' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/sensor_adder.sv:44]
+INFO: [Synth 8-6157] synthesizing module 'ro_sensor' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/ro_sensor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ring_oscillator' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'ring_oscillator' (10#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+INFO: [Synth 8-6157] synthesizing module 'async_up_counter' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/async_up_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'async_up_counter' (11#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/async_up_counter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'c_counter_binary_0' [D:/xvp/project_1.xpr/project_1/project_1.runs/synth_1/.Xil/Vivado-32176-LAPTOP-V2QN0M4Q/realtime/c_counter_binary_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'c_counter_binary_0' (12#1) [D:/xvp/project_1.xpr/project_1/project_1.runs/synth_1/.Xil/Vivado-32176-LAPTOP-V2QN0M4Q/realtime/c_counter_binary_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ro_sensor' (13#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/ro_sensor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'bit_extension' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/bit_extension.sv:23]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000010000 
+	Parameter NEW_WIDTH bound to: 32'sb00000000000000000000000000010100 
+INFO: [Synth 8-6155] done synthesizing module 'bit_extension' (14#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/bit_extension.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'add_tree_new' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/add_tree_new.sv:23]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000010100 
+	Parameter NUM_SENSOR bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-638] synthesizing module 'add_pipe' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/add_pipe.vhd:17]
+	Parameter width bound to: 20 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'add' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/add.vhd:14]
+	Parameter width bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'add' (15#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/add.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'ff' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/ff.vhd:51]
+	Parameter width bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ff' (16#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/ff.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'add_pipe' (17#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/add_pipe.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'ff__parameterized0' [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/ff.vhd:51]
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ff__parameterized0' (17#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/ff.vhd:51]
+INFO: [Synth 8-6155] done synthesizing module 'add_tree_new' (18#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/add_tree_new.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'sensor_adder' (19#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/new/sensor_adder.sv:44]
+INFO: [Synth 8-6157] synthesizing module 'AES_top' [D:/xvp/project_1.xpr/AES/AES_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'AES_Comp_ENC' [D:/xvp/project_1.xpr/AES/AES_Comp_ENC.v:7]
+INFO: [Synth 8-6157] synthesizing module 'AES_Comp_EncCore' [D:/xvp/project_1.xpr/AES/AES_Comp_EncCore.v:7]
+INFO: [Synth 8-6157] synthesizing module 'AES_Comp_SubBytesComp' [D:/xvp/project_1.xpr/AES/AES_Comp_SubBytesComp.v:7]
+INFO: [Synth 8-6157] synthesizing module 'AES_Comp_SboxComp' [D:/xvp/project_1.xpr/AES/AES_Comp_SboxComp.v:7]
+INFO: [Synth 8-6157] synthesizing module 'AES_Comp_GFinvComp' [D:/xvp/project_1.xpr/AES/AES_Comp_GFinvComp.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Comp_GFinvComp' (20#1) [D:/xvp/project_1.xpr/AES/AES_Comp_GFinvComp.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Comp_SboxComp' (21#1) [D:/xvp/project_1.xpr/AES/AES_Comp_SboxComp.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Comp_SubBytesComp' (22#1) [D:/xvp/project_1.xpr/AES/AES_Comp_SubBytesComp.v:7]
+INFO: [Synth 8-6157] synthesizing module 'AES_Comp_MixColumns' [D:/xvp/project_1.xpr/AES/AES_Comp_MixColumns.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Comp_MixColumns' (23#1) [D:/xvp/project_1.xpr/AES/AES_Comp_MixColumns.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/xvp/project_1.xpr/AES/AES_Comp_EncCore.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Comp_EncCore' (24#1) [D:/xvp/project_1.xpr/AES/AES_Comp_EncCore.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Comp_ENC' (25#1) [D:/xvp/project_1.xpr/AES/AES_Comp_ENC.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'AES_top' (26#1) [D:/xvp/project_1.xpr/AES/AES_top.v:23]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/top.sv:49]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [D:/xvp/project_1.xpr/project_1/project_1.runs/synth_1/.Xil/Vivado-32176-LAPTOP-V2QN0M4Q/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (27#1) [D:/xvp/project_1.xpr/project_1/project_1.runs/synth_1/.Xil/Vivado-32176-LAPTOP-V2QN0M4Q/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [D:/xvp/project_1.xpr/project_1/project_1.runs/synth_1/.Xil/Vivado-32176-LAPTOP-V2QN0M4Q/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (28#1) [D:/xvp/project_1.xpr/project_1/project_1.runs/synth_1/.Xil/Vivado-32176-LAPTOP-V2QN0M4Q/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio'. This will prevent further optimization [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/top.sv:58]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'final_sensor'. This will prevent further optimization [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/top.sv:33]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'processor'. This will prevent further optimization [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/top.sv:29]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'aes'. This will prevent further optimization [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/top.sv:42]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'debug_core_ila'. This will prevent further optimization [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/top.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'top' (29#1) [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/components/top.sv:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1215.691 ; gain = 176.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1215.691 ; gain = 176.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1215.691 ; gain = 176.465
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.317 . Memory (MB): peak = 1215.691 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[0].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[0].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[1].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[1].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[2].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[2].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[3].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[3].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[4].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[4].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[5].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[5].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[6].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[6].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[7].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[7].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[8].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[8].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[9].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[9].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[10].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[10].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[11].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[11].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[12].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[12].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[13].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[13].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[14].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[14].sensor/ref_counter'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[15].sensor/ref_counter'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/sources_1/ip/c_counter_binary_0/c_counter_binary_0/c_counter_binary_0_in_context.xdc] for cell 'final_sensor/ro_sensor_multiple_instances[15].sensor/ref_counter'
+Parsing XDC File [d:/xvp/ip_repo/accelerator_1.0/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio'
+Finished Parsing XDC File [d:/xvp/ip_repo/accelerator_1.0/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio'
+Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/ila_0/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'debug_core_ila'
+Finished Parsing XDC File [d:/xvp/project_1.xpr/project_1/project_1.gen/ila_0/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'debug_core_ila'
+Parsing XDC File [D:/xvp/project_1.xpr/project_1/project_1.srcs/constrs_2/new/new_constraint.xdc]
+Finished Parsing XDC File [D:/xvp/project_1.xpr/project_1/project_1.srcs/constrs_2/new/new_constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/xvp/project_1.xpr/project_1/project_1.srcs/constrs_2/new/new_constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/xvp/project_1.xpr/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/xvp/project_1.xpr/project_1/project_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1387.414 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.290 . Memory (MB): peak = 1387.414 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 1387.414 ; gain = 348.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 1387.414 ; gain = 348.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[0].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[1].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[2].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[3].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[4].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[5].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[6].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[7].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[8].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[9].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[10].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[11].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[12].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[13].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[14].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for final_sensor/\ro_sensor_multiple_instances[15].sensor /ref_counter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vio. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for debug_core_ila. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:46 . Memory (MB): peak = 1387.414 ; gain = 348.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:52 . Memory (MB): peak = 1387.414 ; gain = 348.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   64 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 15    
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 2     
+	   2 Input     32 Bit         XORs := 4     
+	   2 Input      9 Bit         XORs := 20    
+	   2 Input      8 Bit         XORs := 17    
+	   2 Input      1 Bit         XORs := 980   
+	   4 Input      1 Bit         XORs := 88    
+	   3 Input      1 Bit         XORs := 380   
+	   5 Input      1 Bit         XORs := 60    
++---XORs : 
+	              128 Bit    Wide XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 5     
+	               64 Bit    Registers := 288   
+	               20 Bit    Registers := 31    
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 5     
+	 257 Input   64 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 4     
+	   5 Input   64 Bit        Muxes := 2     
+	 257 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 1     
+	   4 Input   12 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	  11 Input    8 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 303   
+	   5 Input    1 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:56 . Memory (MB): peak = 1387.414 ; gain = 348.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:40 ; elapsed = 00:02:10 . Memory (MB): peak = 1387.414 ; gain = 348.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/p_1_out_inferred/p_0_in[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/i_0/clk_out
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/i_0/p_0_in
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/p_1_out_inferred/wi_orig[1]
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:13 ; elapsed = 00:02:45 . Memory (MB): peak = 1462.570 ; gain = 423.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+      : i_0/final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred__0/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred__0/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred/out[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred/in0[1]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred__0/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred__0/in0[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred/out[0]
+      : i_0/final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred/in0[0]
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/i_0/O (INV)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/i_0/I (INV)
+      : final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/i_0/O (INV)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I -to O final_sensor/\ro_sensor_multiple_instances[0].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     1: final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred/in0[1]
+     2: final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     3: final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/wi_inferred/in0[0]
+     4: final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I1 -to O final_sensor/\ro_sensor_multiple_instances[1].sensor /ro/i_1"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[2].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[3].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[4].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[5].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[6].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[7].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[8].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[9].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[10].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[11].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[12].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[13].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[14].sensor /ro/i_0"
+Found timing loop:
+     0: final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+     1: final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/i_0/I0 (LUT1)
+      : final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred__0/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred__0/in0[0]
+      : final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred/out[0]
+      : final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred/in0[0]
+     2: final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/i_1/O (LUT2)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+     3: final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/i_1/I1 (LUT2)
+      : final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred__0/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred__0/in0[1]
+      : final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred/out[1]
+      : final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/wi_inferred/in0[1]
+     4: final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/i_0/O (LUT1)
+      [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:37]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/xvp/project_1.xpr/project_1/project_1.srcs/sources_1/imports/ring_oscillator/ring_oscillator.v:20]
+Inferred a: "set_disable_timing -from I0 -to O final_sensor/\ro_sensor_multiple_instances[15].sensor /ro/i_0"
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:30 ; elapsed = 00:03:06 . Memory (MB): peak = 1468.441 ; gain = 429.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:39 ; elapsed = 00:03:16 . Memory (MB): peak = 1468.441 ; gain = 429.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:39 ; elapsed = 00:03:16 . Memory (MB): peak = 1468.441 ; gain = 429.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:43 ; elapsed = 00:03:19 . Memory (MB): peak = 1468.441 ; gain = 429.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------+----------+
+|      |BlackBox name      |Instances |
++------+-------------------+----------+
+|1     |c_counter_binary_0 |        16|
+|2     |ila_0              |         1|
+|3     |vio_0              |         1|
++------+-------------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |c_counter_binary   |     1|
+|2     |c_counter_binary_0 |    15|
+|17    |ila                |     1|
+|18    |vio                |     1|
+|19    |BUFG               |     1|
+|20    |CARRY4             |   167|
+|21    |LUT1               |    33|
+|22    |LUT2               |   481|
+|23    |LUT3               |   464|
+|24    |LUT4               |   748|
+|25    |LUT5               |   689|
+|26    |LUT6               |  4977|
+|27    |MUXF7              |  2176|
+|28    |MUXF8              |  1024|
+|29    |FDCE               | 17494|
+|30    |FDRE               |   433|
+|31    |FDSE               |     1|
+|32    |IBUF               |     1|
++------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:43 ; elapsed = 00:03:20 . Memory (MB): peak = 1468.441 ; gain = 429.215
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 16 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:29 ; elapsed = 00:03:00 . Memory (MB): peak = 1468.441 ; gain = 257.492
+Synthesis Optimization Complete : Time (s): cpu = 00:02:43 ; elapsed = 00:03:21 . Memory (MB): peak = 1468.441 ; gain = 429.215
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.619 . Memory (MB): peak = 1471.316 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3367 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'data_memory' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1476.016 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: d969c217
+INFO: [Common 17-83] Releasing license: Synthesis
+83 Infos, 2 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:57 ; elapsed = 00:03:52 . Memory (MB): peak = 1476.016 ; gain = 436.789
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/xvp/project_1.xpr/project_1/project_1.runs/synth_1/top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1476.016 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  5 15:31:52 2022...

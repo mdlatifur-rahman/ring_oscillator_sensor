@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Sep 29 02:25:47 2022
+# Process ID: 12744
+# Current directory: D:/xvp/project_1.xpr/project_1/project_1.runs/vio_0_synth_1
+# Command line: vivado.exe -log vio_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vio_0.tcl
+# Log file: D:/xvp/project_1.xpr/project_1/project_1.runs/vio_0_synth_1/vio_0.vds
+# Journal file: D:/xvp/project_1.xpr/project_1/project_1.runs/vio_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source vio_0.tcl -notrace

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ro_sensor_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="ro_sensor_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="9,059.509 ns"></ZoomStartTime>
+      <ZoomEndTime time="9,139.610 ns"></ZoomEndTime>
+      <Cursor1Time time="9,075.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wave_markers>
+      <marker time="3937000" label="" />
+      <marker time="3965000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/ro_sensor_tb/DUT/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ro_sensor_tb/DUT/ref_clk" type="logic">
+      <obj_property name="ElementShortName">ref_clk</obj_property>
+      <obj_property name="ObjectShortName">ref_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ro_sensor_tb/DUT/freq" type="array">
+      <obj_property name="ElementShortName">freq[15:0]</obj_property>
+      <obj_property name="ObjectShortName">freq[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ro_sensor_tb/DUT/valid" type="logic">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ro_sensor_tb/DUT/ro_counter_sclr" type="logic">
+      <obj_property name="ElementShortName">ro_counter_sclr</obj_property>
+      <obj_property name="ObjectShortName">ro_counter_sclr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ro_sensor_tb/DUT/Q_temp" type="array">
+      <obj_property name="ElementShortName">Q_temp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q_temp[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ro_sensor_tb/DUT/clk_out" type="logic">
+      <obj_property name="ElementShortName">clk_out</obj_property>
+      <obj_property name="ObjectShortName">clk_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ro_sensor_tb/DUT/freq_out" type="array">
+      <obj_property name="ElementShortName">freq_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">freq_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ro_sensor_tb/DUT/valid_max" type="logic">
+      <obj_property name="ElementShortName">valid_max</obj_property>
+      <obj_property name="ObjectShortName">valid_max</obj_property>
+   </wvobject>
+</wave_config>
